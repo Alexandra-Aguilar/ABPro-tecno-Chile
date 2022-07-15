@@ -1,0 +1,13 @@
+Algoritmo operaciones_matematicas
+	Escribir 'Operaciones basicas'
+	Escribir 'Ingrese primer digito:'
+	Leer n1
+	Escribir 'Ingrese segundo digito:'
+	Leer n2
+	suma <- n1+n2
+	resta <- n1-n2
+	multiplicacion <- n1*n2
+	Escribir 'El resultado de la suma es ',n1,'+',n2,'=',suma,''
+	Escribir 'El resultado de la resta es ',n1,'-',n2,'=',resta,''
+	Escribir 'El resultado de la multiplicacion es ',n1,'*',n2,'=',multiplicacion,''
+FinAlgoritmo
