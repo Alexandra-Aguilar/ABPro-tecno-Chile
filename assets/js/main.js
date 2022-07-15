@@ -1,12 +1,13 @@
 function nuevoCliente(){
     var name = document.getElementById("userinput1").value;
-    document.getElementById("nombrecliente").innerHTML = name;
-
     var lastname = document.getElementById("userinput2").value;
-    document.getElementById("apellidocliente").innerHTML = lastname;
-
     var address = document.getElementById("userinput3").value;
-    document.getElementById("direccioncliente").innerHTML = address;
+   
+    var row="<tr><td>"+name+"</td><td>"+lastname +"</td><td>"+address+"</td></tr>";
+
+    var btn = document.createElement("TR");
+   	btn.innerHTML=row;
+    document.getElementById("tb").appendChild(btn);
 }
 
 nuevoCliente();
