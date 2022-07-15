@@ -120,19 +120,27 @@
 
 
 
-        <section class="main-formulario">
+        <section class="main-formulario container my-3">
             <h1>Formulario</h1>
-            <p>(lo tenemos que rehacer con bootstrap)</p>
-            Nombre: <input id="userinput1"><br>
-            Apellido: <input id="userinput2"><br>
-            Dirección: <input id="userinput3"><br>
-    
-            <button onclick="nuevoCliente();">Ingresar</button>
+            <div class="form-group">
+              <label for="userinput1">Nombre</label>
+              <input id="userinput1" type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+              <label for="userinput2">Apellido</label>
+              <input id="userinput2" type="text" class="form-control" placeholder="Apellido">
+            </div>
+            <div class="form-group">
+              <label for="userinput3">Direccion</label>
+              <input id="userinput3" type="text" class="form-control" placeholder="Direccion">
+            </div>
+            <button onclick="nuevoCliente();" class="btn btn-primary">Ingresar</button>
+          
        </section>
   
     
   
-      <section class="main-clientes">
+      <section class="main-clientes container mt-5">
           <h1>Tabla</h1>
           <table class="table">
               <thead>
