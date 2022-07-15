@@ -8,3 +8,16 @@
  width: 100px;
  height: 100px;
 }
+
+
+.carousel-item img {
+    width: 40%;
+    min-width: 300px;
+    max-width: 400px;
+    height: 45%;
+    max-height: 350px;
+    
+    min-height: 300px;
+    margin: 0 auto;
+    
+}
