@@ -25,6 +25,17 @@ header .icon-header   {
     margin: 0 auto;
     
 }
+.container-contador {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-contador div {
+    width: 60px;
+    margin: 0 auto;
+}
 
 .scrollTop{
   position: fixed;

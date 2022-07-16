@@ -15,3 +15,38 @@ nuevoCliente();
 function scrollToTop(){
     window.scrollTo(0,0);
 }
+
+
+
+
+function agregar() {
+
+    
+    var element = document.getElementById("incrementText");
+    var value = element.innerHTML;
+
+    ++value;
+
+    document.getElementById("incrementText").innerHTML = value;
+
+    if (value < 0) {document.getElementById("contador").style.backgroundColor = "red";}
+    else if (value > 19) {document.getElementById("contador").style.backgroundColor = "green";}
+    else {document.getElementById('contador').style.removeProperty("background-color");}
+}
+
+agregar();
+
+function quitar() {
+    var element = document.getElementById("incrementText");
+    var value = element.innerHTML;
+
+    --value;
+
+    document.getElementById("incrementText").innerHTML = value;
+
+    if (value < 0) {document.getElementById("contador").style.backgroundColor = "red";}
+    else if (value > 19) {document.getElementById("contador").style.backgroundColor = "green";}
+    else {document.getElementById('contador').style.removeProperty("background-color");}
+}
+
+quitar();
