@@ -3,109 +3,138 @@
 
 <head>
 
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
 
 
-  <title>Tecno Chile | Ventas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/css/index.css">
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>Tecno Chile | Ventas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
+
 <body>
+    <header>
 
-<header><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="anythingSearch" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav></header>
 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="icon-header" src="./assets/img/icontecno.png" alt="">
+                    Tecno Chile
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active " aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#quienes-somos">¿Quienes Somos?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#carrusel">Galería </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#formulario">Formulario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-platzi" href="index.html#tabla">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-platzi" href="ventas.html">Productos</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
     <main>
 
 
-        <div id="cards" class="col-md-6 mx-auto justify-content-center">
+        <div id="cards" class="container-fluid mx-auto justify-content-center">
+           
+                <div class="card m-1 col-6 mx-auto">
 
-            <div class="card">
-        
-                <div class="card-body mt-3">
-                  <h5 class="card-title" id="producto1"></h5>
-                  <p class="card-text" id="precio1"></p>
-                  <a href="#" class="btn btn-primary">Agregar al carro</a>
+                    <div class="card-body">
+                        <h5 class="card-title" id="producto1"></h5>
+                        <p class="card-text" id="precio1"></p>
+                        <a href="#" class="btn btn-dark mt-3">Agregar al carro</a>
+                    </div>
+               
                 </div>
-              </div>
+                <div class="card m-1 col-6 mx-auto">
 
-              <div class="card mt-3">
-        
-                <div class="card-body">
-                  <h5 class="card-title" id="producto2"></h5>
-                  <p class="card-text" id="precio2"></p>
-                  <a href="#" class="btn btn-primary">Agregar al carro</a>
+                    <div class="card-body">
+                        <h5 class="card-title" id="producto2"></h5>
+                        <p class="card-text" id="precio2"></p>
+                        <a href="#" class="btn btn-dark mt-3">Agregar al carro</a>
+                    </div>
                 </div>
-              </div>
+           
 
-              <div class="card mt-3">
-        
-                <div class="card-body">
-                  <h5 class="card-title" id="producto3"></h5>
-                  <p class="card-text" id="precio3"></p>
-                  <a href="#" class="btn btn-primary">Agregar al carro</a>
+           
+
+                <div class="card m-1 col-6 mx-auto">
+
+                    <div class="card-body">
+                        <h5 class="card-title" id="producto3"></h5>
+                        <p class="card-text" id="precio3"></p>
+                        <a href="#" class="btn btn-dark mt-3">Agregar al carro</a>
+                    </div>
                 </div>
-              </div>
 
-              <div class="card mt-3">
-        
-                <div class="card-body">
-                  <h5 class="card-title" id="producto4"></h5>
-                  <p class="card-text" id="precio4"></p>
-                  <a href="#" class="btn btn-primary">Agregar al carro</a>
+                <div class="card m-1 col-6 mx-auto">
+
+                    <div class="card-body">
+                        <h5 class="card-title" id="producto4"></h5>
+                        <p class="card-text" id="precio4"></p>
+                        <a href="#" class="btn btn-dark mt-3">Agregar al carro</a>
+                    </div>
                 </div>
-              </div>
-
+            
 
 
         </div>
     </main>
 
+
+    <div onclick="scrollToTop()" class="scrollTop">Ir Arriba</div>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-skype"></i></a>
+        </div>
+    </footer>
+
     <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-<script src="assets/js/ventas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/ventas.js"></script>
 
 </body>
-</html>
 
+</html>
