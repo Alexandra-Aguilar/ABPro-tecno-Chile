@@ -8,6 +8,11 @@ function nuevoCliente(){
     var btn = document.createElement("TR");
    	btn.innerHTML=row;
     document.getElementById("tb").appendChild(btn);
+
+    document.getElementById("userinput1").value ="";
+    document.getElementById("userinput2").value = "";
+    document.getElementById("userinput3").value = "";
+    document.getElementById("userinput1").focus();
 }
 
 nuevoCliente();
