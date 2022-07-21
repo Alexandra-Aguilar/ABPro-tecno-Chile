@@ -37,6 +37,23 @@ header .icon-header   {
     margin: 0 auto;
 }
 
+
+
+.container-productos{
+width: 100%;
+height: 100%;
+
+}
+.container-productos div{
+  width: 80%;
+  min-width: 185px;
+  max-width: 400px;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  
+  }
+
 .scrollTop{
   position: fixed;
   bottom: 30px;
