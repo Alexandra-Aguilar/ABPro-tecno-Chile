@@ -12,7 +12,7 @@ function nuevoCliente(){
     document.getElementById("userinput1").value ="";
     document.getElementById("userinput2").value = "";
     document.getElementById("userinput3").value = "";
-    document.getElementById("userinput1").focus();
+    //document.getElementById("userinput1").focus();
 }
 
 nuevoCliente();

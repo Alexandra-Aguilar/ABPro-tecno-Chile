@@ -5,15 +5,17 @@ let productos = [
     { id: "4", producto: "Silla", precio: "$400" }
 ]
 
-function eliminarProductos(productos){
+
+//función para eliminar productos
+function eliminarProductos(productos) {
     productos.pop();
     productos.shift();
 }
 
-//eliminarProductos(productos);
 
 
 
+//función para cargar productos
 function cargarDatos() {
     var datos = '';
     productos.forEach(function (e) {
@@ -31,4 +33,9 @@ function cargarDatos() {
     var datosContenedor = document.getElementById("cards");
     datosContenedor.outerHTML = `<div id="cards" class="container-fluid mx-auto justify-content-center">${datos}</div`;
 
+}
+
+//función para subir al principio de la página
+function scrollToTop() {
+    window.scrollTo(0, 0);
 }
