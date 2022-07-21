@@ -5,6 +5,14 @@ let productos = [
     { id: "4", producto: "Silla", precio: "$400" }
 ]
 
+function eliminarProductos(productos){
+    productos.pop();
+    productos.shift();
+}
+
+//eliminarProductos(productos);
+
+
 
 function cargarDatos() {
     var datos = '';
