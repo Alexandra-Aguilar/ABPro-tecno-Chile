@@ -5,18 +5,22 @@ let productos = [
     { id: "4", producto: "Silla", precio: "$400" }
 ]
 
-document.getElementById("producto1").innerHTML = productos[0].producto;
 
-document.getElementById("precio1").innerHTML = productos[0].precio;
+function cargarDatos() {
+    var datos = '';
+    productos.forEach(function (e) {
+        var htmlDatos = `<div class="card m-1 col-6 mx-auto">
 
-document.getElementById("producto2").innerHTML = productos[1].producto;
+                        <div class="card-body">
+                            <h5 class="card-title" id="producto1">${e.producto}</h5>
+                            <p class="card-text" id="precio1">${e.precio}</p>
+                            <a href="#" class="btn btn-dark mt-3">Agregar al carro</a>
+                        </div>
+   
+                        </div>`;
+        datos += htmlDatos;
+    });
+    var datosContenedor = document.getElementById("cards");
+    datosContenedor.outerHTML = `<div id="cards" class="container-fluid mx-auto justify-content-center">${datos}</div`;
 
-document.getElementById("precio2").innerHTML = productos[1].precio;
-
-document.getElementById("producto3").innerHTML = productos[2].producto;
-
-document.getElementById("precio3").innerHTML = productos[2].precio;
-
-document.getElementById("producto4").innerHTML = productos[3].producto;
-
-document.getElementById("precio4").innerHTML = productos[3].precio;
+}

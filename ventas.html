@@ -18,7 +18,7 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 
-<body>
+<body onload="cargarDatos()">
     <header>
 
 
@@ -37,7 +37,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active " aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link active " aria-current="page" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html#quienes-somos">¿Quienes Somos?</a>
@@ -68,52 +68,7 @@
 
     </header>
     <main>
-
-
-        <div id="cards" class="container-fluid mx-auto justify-content-center">
-           
-                <div class="card m-1 col-6 mx-auto">
-
-                    <div class="card-body">
-                        <h5 class="card-title" id="producto1"></h5>
-                        <p class="card-text" id="precio1"></p>
-                        <a href="#" class="btn btn-dark mt-3">Agregar al carro</a>
-                    </div>
-               
-                </div>
-                <div class="card m-1 col-6 mx-auto">
-
-                    <div class="card-body">
-                        <h5 class="card-title" id="producto2"></h5>
-                        <p class="card-text" id="precio2"></p>
-                        <a href="#" class="btn btn-dark mt-3">Agregar al carro</a>
-                    </div>
-                </div>
-           
-
-           
-
-                <div class="card m-1 col-6 mx-auto">
-
-                    <div class="card-body">
-                        <h5 class="card-title" id="producto3"></h5>
-                        <p class="card-text" id="precio3"></p>
-                        <a href="#" class="btn btn-dark mt-3">Agregar al carro</a>
-                    </div>
-                </div>
-
-                <div class="card m-1 col-6 mx-auto">
-
-                    <div class="card-body">
-                        <h5 class="card-title" id="producto4"></h5>
-                        <p class="card-text" id="precio4"></p>
-                        <a href="#" class="btn btn-dark mt-3">Agregar al carro</a>
-                    </div>
-                </div>
-            
-
-
-        </div>
+        <div id="cards" class="container-fluid mx-auto justify-content-center"></div>
     </main>
 
 
