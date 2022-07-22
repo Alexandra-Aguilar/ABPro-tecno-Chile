@@ -42,21 +42,21 @@ function buscar() {
     var cardContainer;
     var titulo;
     
-    input = document.getElementById("filtro");
+    input = document.getElementById("filtro"); //obtenemos el id de input
     
-    filter = input.value.toUpperCase();
+    filter = input.value.toUpperCase(); //los valores ingresados por el input se pasan a mayúscula
     
-    cardContainer = document.getElementById("cards");
+    cardContainer = document.getElementById("cards");//obtenemos el elemento padre que contiene las card
     
-    cards = cardContainer.getElementsByClassName("card");
+    cards = cardContainer.getElementsByClassName("card");//obtenemos los elementos hijos mediante la clase que comparten todas las card
     
     for (var i = 0; i < cards.length; i++) {
-        titulo = cards[i].querySelector(".card-title");
+        titulo = cards[i].querySelector(".card-title"); //guardamos los titulos de los productos en la variable titulo
         
-        if (titulo.innerText.toUpperCase().indexOf(filter) > -1) {
-            cards[i].style.display = "";
+        if (titulo.innerText.toUpperCase().indexOf(filter) > -1) { //buscamos coincidencias entre el input(filter) y los titulos(titulo)
+            cards[i].style.display = "";                           //indexOf devolverá -1 si no hay coincidencias
         } else {
-            cards[i].style.display = "none";
+            cards[i].style.display = "none"; //ocultamos los elementos no coincidentes
         }
     }
 }
