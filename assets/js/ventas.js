@@ -35,6 +35,32 @@ function cargarDatos() {
 
 }
 
+function buscar() {
+    var input;
+    var filter; 
+    var cards; 
+    var cardContainer;
+    var titulo;
+    
+    input = document.getElementById("filtro");
+    
+    filter = input.value.toUpperCase();
+    
+    cardContainer = document.getElementById("cards");
+    
+    cards = cardContainer.getElementsByClassName("card");
+    
+    for (var i = 0; i < cards.length; i++) {
+        titulo = cards[i].querySelector(".card-title");
+        
+        if (titulo.innerText.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
 //función para subir al principio de la página
 function scrollToTop() {
     window.scrollTo(0, 0);
