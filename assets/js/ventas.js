@@ -152,14 +152,15 @@ const pintarFooter = () => {
     if(Object.keys(carrito).length === 0){
         footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
         `
+
         return
     }
 
     const nCantidad = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad, 0);
 
-    document.getElementById("cartAmount").innerHTML = `<i class="bi bi-cart"></i> (${nCantidad})`;
-
     const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio,0);
+
+    document.getElementById("cartAmount").innerHTML = `<i class="bi bi-cart"></i> (${nCantidad})`;
 
     templateFooter.querySelectorAll('td')[0].textContent = nCantidad;
     templateFooter.querySelector('span').textContent = nPrecio;
@@ -169,12 +170,13 @@ const pintarFooter = () => {
     fragment.appendChild(clone);
 
 
-
     footer.appendChild(fragment);
 
     const btnVaciar = document.getElementById('vaciar-carrito');
     btnVaciar.addEventListener('click', () =>{
+        
         carrito = {}
+        document.getElementById("cartAmount").innerHTML = `<i class="bi bi-cart"></i>`;
         pintarCarrito()
 
     })
