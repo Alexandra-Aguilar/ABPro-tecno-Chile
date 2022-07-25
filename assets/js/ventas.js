@@ -86,6 +86,7 @@ const fetchData = async () => {
 
 const pintarCards = data =>{
     data.forEach(producto => {
+        templateCard.querySelector('h6').textContent = producto.id;
         templateCard.querySelector('h5').textContent = producto.title;
         templateCard.querySelector('p').textContent = producto.precio
         templateCard.querySelector('img').setAttribute("src", producto.thumbnailUrl);
@@ -236,9 +237,10 @@ function buscar() {
 
     for (var i = 0; i < cards.length; i++) {
         titulo = cards[i].querySelector(".card-title"); //guardamos los titulos de los productos en la variable titulo
+        codigo = cards[i].querySelector(".card-id");
 
-        if (titulo.innerText.toUpperCase().indexOf(filter) > -1) { //buscamos coincidencias entre el input(filter) y los titulos(titulo)
-            cards[i].style.display = "";                           //indexOf devolverá -1 si no hay coincidencias
+        if (titulo.innerText.toUpperCase().includes(filter) || codigo.innerText.includes(filter)) { //buscamos si los titulos(titulo) incluyen el input introducido
+            cards[i].style.display = "";                           
         } else {
             cards[i].style.display = "none"; //ocultamos los elementos no coincidentes
         }
