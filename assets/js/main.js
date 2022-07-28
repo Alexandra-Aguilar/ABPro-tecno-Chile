@@ -34,9 +34,9 @@ function agregar() {
 
     document.getElementById("incrementText").innerHTML = value;
 
-    if (value < 0) {document.getElementById("contador").style.backgroundColor = "red";}
-    else if (value > 19) {document.getElementById("contador").style.backgroundColor = "green";}
-    else {document.getElementById('contador').style.removeProperty("background-color");}
+    if (value < 0) {document.getElementById("div-contador").style.backgroundColor = "red";}
+    else if (value > 19) {document.getElementById("div-contador").style.backgroundColor = "green";}
+    else {document.getElementById("div-contador").style.removeProperty("background-color");}
 }
 
 agregar();
@@ -49,9 +49,9 @@ function quitar() {
 
     document.getElementById("incrementText").innerHTML = value;
 
-    if (value < 0) {document.getElementById("contador").style.backgroundColor = "red";}
-    else if (value > 19) {document.getElementById("contador").style.backgroundColor = "green";}
-    else {document.getElementById('contador').style.removeProperty("background-color");}
+    if (value < 0) {document.getElementById("div-contador").style.backgroundColor = "red";}
+    else if (value > 19) {document.getElementById("div-contador").style.backgroundColor = "green";}
+    else {document.getElementById("div-contador").style.removeProperty("background-color");}
 }
 
 quitar();
