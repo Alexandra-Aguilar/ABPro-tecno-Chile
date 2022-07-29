@@ -25,7 +25,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-            <div class="container">
+                       <div class="container">
                 <a class="navbar-brand" href="#">
                     <img class="icon-header" src="./assets/img/icontecno.png" alt="">
                     Tecno Chile
@@ -68,21 +68,35 @@
 
     </header>
     <main>
+
+        <div class="container">
+            <!-- Button trigger modal -->
+            <button
+            type="button"
+           class="btn btn-primary btn-carrito m-3 scrolliconCarrito"
+           data-bs-toggle="modal"
+           data-bs-target="#exampleModal"
+           id="cartAmount"
+           
+           >
+           <i class="bi bi-cart"></i>
+           </button>
+ </div>
         <div class="container">
             <h1>Carrito</h1>
             <hr>
     
                     <!-- Button trigger modal -->
-                <button
+                <!-- <button
                  type="button"
-                class="btn btn-primary btn-lg btn-dark m-3 scrolliconCarrito"
+                class="btn btn-primary btn-lg btn-dark btn-carrito m-3 scrolliconCarrito"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 id="cartAmount"
                 
                 >
                 <i class="bi bi-cart"></i>
-                </button>
+                </button> -->
             
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
