@@ -21,4 +21,4 @@
   }
 
  .btn-carrito {font-size: 30px; background-color: rgb(238, 57, 57) ; color: orange; border: 2px solid orange}
-  .btn-carrito:hover {background-color: orange; color: rgb(238, 57, 57); border: 2px solid rgb(238, 57, 57)} 
+  .btn-carrito:hover, .btn-carrito:focus {background-color: orange; color: rgb(238, 57, 57); border: 2px solid rgb(238, 57, 57); box-shadow: none} 
