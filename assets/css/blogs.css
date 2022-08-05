@@ -75,3 +75,8 @@ header .icon-header   {
     display: none;
     text-align: center;
   }
+
+  #cardsposts {
+    display: flex;
+    padding: 50px;
+  }
