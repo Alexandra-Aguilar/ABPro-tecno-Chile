@@ -74,3 +74,14 @@ datosPosts.forEach((post)  =>{
 
 });
 
+function modalPost(id) {
+    var dato = datosPosts.find((post) =>{
+        return post.id == id;
+    });
+
+   
+    var bodyPost = document.getElementById("exampleModalLabel");
+    bodyPost.innerHTML = dato.body;
+
+}
+
