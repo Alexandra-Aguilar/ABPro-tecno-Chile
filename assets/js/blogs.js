@@ -8,3 +8,18 @@ function validarNoNumeros(){ //Ejemplo de como validamos que no se tipeen númer
         return console.log(false);
     }
 }
+
+// loader
+
+// loader
+
+var myVar;
+
+function myLoader() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("blogs-body").style.display = "block";
+}
