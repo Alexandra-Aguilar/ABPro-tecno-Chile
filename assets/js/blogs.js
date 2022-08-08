@@ -62,7 +62,7 @@ var datosPosts = [
 
 datosPosts.forEach((post)  =>{
     var cardsposts = document.getElementById("cardsposts");
-    cardsposts.innerHTML += `<div class="card" style="width: 18rem;">
+    cardsposts.innerHTML += `<div class="card col-12 col-md-4">
                                 <div class="card-body">
                                 <h5 class="card-title">${post.userId}</h5>
                                 <h5 class="card-title">${post.title}</h5>
