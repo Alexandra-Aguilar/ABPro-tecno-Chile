@@ -1,12 +1,10 @@
-var onlyLetters = /^[A-Za-z]+$/;
 
-function validarNoNumeros(){ //Ejemplo de como validamos que no se tipeen números en el buscador
-    var txtInput = document.getElementById("filtro").value; 
-    if(txtInput.match(onlyLetters)){
-        return console.log(true);
-    }else{
-        return console.log(false);
-    }
+
+function validarNoNumeros(input){ //Ejemplo de como validamos que no se tipeen números en el buscador
+    var onlyLetters = /[^A-Za-z]/gi;
+    input.value = input.value.replace(onlyLetters, "");
+    //var textInput = document.getElementById("filtro").value;
+    
 }
 
 // loader
