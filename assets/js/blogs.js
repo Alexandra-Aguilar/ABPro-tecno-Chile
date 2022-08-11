@@ -1,4 +1,4 @@
-
+var data = ""; //Variable declarada de manera global
 
 function validarNoNumeros(input){ //Ejemplo de como validamos que no se tipeen números en el buscador
     var onlyLetters = /[^A-Za-z]/gi;
@@ -58,7 +58,7 @@ var datosPosts = [
     },
 ]
 
-datosPosts.forEach((post)  =>{
+/*datosPosts.forEach((post)  =>{
     var cardsposts = document.getElementById("cardsposts");
     cardsposts.innerHTML += `<div class="card col-12 col-md-4">
                                 <div class="card-body">
@@ -70,16 +70,63 @@ datosPosts.forEach((post)  =>{
                                 </div>
                             </div>`;
 
-});
+});*/
 
-function modalPost(id) {
-    var dato = datosPosts.find((post) =>{
-        return post.id == id;
-    });
 
-   
-    var bodyPost = document.getElementById("exampleModalLabel");
-    bodyPost.innerHTML = dato.body;
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetchDatos();
+})
+
+const fetchDatos = async () =>{
+    
+    try {
+        
+        const res = await fetch("https://jsonplaceholder.typicode.com/posts/");
+        data = await res.json();
+        crearCard(data)
+        
+
+    } catch (error) {
+        
+    }
+}
+
+const crearCard = data => {
+    
+    const cards = document.getElementById('cardsposts')
+    const templateCard = document.getElementById('template-card').content
+    const fragment = document.createDocumentFragment();
+    
+
+    for (let i = 0; i < 20; i++) {   
+    
+        templateCard.querySelector('.card-title-id').textContent = data[i].id  
+        templateCard.querySelector('.card-title').textContent = data[i].title 
+        templateCard.querySelector('.btn-primary').setAttribute('onclick', `modalPost(${data[i].id})`)
+    
+    const clon = templateCard.cloneNode(true) //Clonamos la estructura de templateCard
+    fragment.appendChild(clon)
+    }
+    
+
+    cards.appendChild(fragment);
 
 }
+
+
+
+    function modalPost(id) {
+        
+        var dato = data.find((post) =>{
+            return post.id == id;
+        });
+    
+       
+        var bodyPost = document.getElementById("exampleModalLabel");
+        bodyPost.innerHTML = dato.body;
+    
+    }
+
+
 
