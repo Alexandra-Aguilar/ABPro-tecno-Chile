@@ -84,8 +84,8 @@ const fetchDatos = async () =>{
         
         const res = await fetch("https://jsonplaceholder.typicode.com/posts/");
         data = await res.json();
-        crearCard(data)
-        
+        crearCard(data) //Enviamos la información como parámetro
+        recibirPromise() //Mostramos el mensaje por consola
 
     } catch (error) {
         
@@ -126,6 +126,20 @@ const crearCard = data => {
         var bodyPost = document.getElementById("exampleModalLabel");
         bodyPost.innerHTML = dato.body;
     
+    }
+
+    function retornoPromise(){  //Retornamos la promesa
+        return new Promise((resolve,reject) =>{
+            setTimeout(() =>{
+                resolve('Información Enviada')
+            }, 3000)
+        })
+    }
+
+
+    const recibirPromise = async () => { //La recibimos en el método asincrono
+        const mensajePromise = await retornoPromise();
+        console.log(mensajePromise);
     }
 
 
