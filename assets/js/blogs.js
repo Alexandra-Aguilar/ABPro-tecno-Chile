@@ -88,7 +88,7 @@ const fetchDatos = async () =>{
         recibirPromise() //Mostramos el mensaje por consola
 
     } catch (error) {
-        
+        alert(error)
     }
 }
 
@@ -114,20 +114,49 @@ const crearCard = data => {
 
 }
 
+    const modalPost = async (id) =>{ //Método modalPost
+        var titlePost = document.getElementById('exampleModalLabel');
+        var bodyPost = document.querySelector('.modal-body');
+
+        try {
+
+            const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+            dataPost = await res.json()
+
+            if(dataPost !== '' ){
+                titlePost.innerHTML = dataPost.title
+                bodyPost.innerHTML = dataPost.body
+            }else{
+                alert("El post está vacio")
+            }
+            
+            
+            
+            
+        } catch (error) {
+            alert(error)
+        }
+    }
 
 
-    function modalPost(id) {
+
+    /*function modalPost(id) {
         
         var dato = data.find((post) =>{
             return post.id == id;
         });
-    
+        
+        console.log(data)
        
         var bodyPost = document.getElementById("exampleModalLabel");
         bodyPost.innerHTML = dato.body;
+        console.log(bodyPost)
     
-    }
+    }*/
 
+    
+    
+    
     function retornoPromise(){  //Retornamos la promesa
         return new Promise((resolve,reject) =>{
             setTimeout(() =>{
