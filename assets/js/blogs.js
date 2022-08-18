@@ -4,7 +4,32 @@ function validarNoNumeros(input) { //Ejemplo de como validamos que no se tipeen 
     var onlyLetters = /[^A-Za-z]/gi;
     input.value = input.value.replace(onlyLetters, "");
     //var textInput = document.getElementById("filtro").value;
+    buscar(input)
+}
 
+function buscar(input) {
+    
+    var filter;
+    var cards;
+    var cardContainer;
+    var titulo;
+
+    filter = input.value.toUpperCase(); //los valores ingresados por el input se pasan a mayúscula
+
+    cardContainer = document.getElementById("cardsposts");//obtenemos el elemento padre que contiene las card
+
+    cards = cardContainer.getElementsByClassName("card");//obtenemos los elementos hijos mediante la clase que comparten todas las card
+
+    for (var i = 0; i < cards.length; i++) {
+        titulo = cards[i].querySelector(".card-title"); //guardamos los titulos de los productos en la variable titulo
+        codigo = cards[i].querySelector(".card-title-id");
+
+        if (titulo.innerText.toUpperCase().includes(filter) || codigo.innerText.includes(filter)) { //buscamos si los titulos(titulo) incluyen el input introducido
+            cards[i].style.display = "";                           
+        } else {
+            cards[i].style.display = "none"; //ocultamos los elementos no coincidentes
+        }
+    }
 }
 
 // loader
